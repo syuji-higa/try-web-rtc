@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .video { display: flex; }
+    #local-video, #remote-video { width: 400px; height: 300px; background-color: #333; }
+  </style>
+</head>
+<body>
+  <button type="button" id="start-button">Start Video</button>
+  <button type="button" id="connect-button">Connect</button>
+  <button type="button" id="hang-up-button">Hang Up</button>
+  
+  <div class="video">
+    <video id="local-video"></video>
+    <video id="remote-video"></video>
+  </div>
+
+  <textarea id="text-for-send-sdp" rows="5" cols="60" readonly="readonly">SDP to send</textarea>
+    
+  <button type="button" id="sdp-text-button">Receive remote SDP</button><br />
+  <textarea id="text-for-receive-sdp" rows="5" cols="60"></textarea>
+</p>
+  
+  <script type="module" src="index.js"></script>
+</body>
+</html>
